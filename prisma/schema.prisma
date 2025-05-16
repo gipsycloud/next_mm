@@ -23,6 +23,15 @@ model Todo {
   updatedAt DateTime @updatedAt
 }
 
+model Video {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  description String
+  videoId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 model UserInfo {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   name String
