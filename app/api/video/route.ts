@@ -3,7 +3,7 @@ import { video } from "framer-motion/client";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextRequest, res: NextResponse) {  // data types
-  const videos = await db.video.findMany({});
+  const videos = await db.video.findMany();
   return NextResponse.json({ message: "Show All Videos !!", videos });
 }
 export async function POST(req: NextRequest, res: NextResponse) {
